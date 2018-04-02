@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/product"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_margin">
+
+    <TextView
+        android:id="@+id/product_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textColor="#004d91"
+        tools:text="LightSaber" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/price_text"
+            style="@style/summary_style"
+            android:paddingRight="@dimen/padding_big"
+            android:text="@string/price" />
+
+        <TextView
+            android:id="@+id/product_price"
+            style="@style/summary_style"
+            android:layout_toLeftOf="@id/sale_button"
+            tools:text="200 €" />
+
+
+        <TextView
+            android:id="@+id/quantity_text"
+            style="@style/summary_style"
+            android:layout_below="@id/price_text"
+            android:paddingRight="@dimen/padding_big"
+            android:text="@string/quantity" />
+
+
+        <TextView
+            android:id="@+id/product_quantity"
+            style="@style/summary_style"
+            android:layout_below="@id/product_price"
+            android:layout_toLeftOf="@id/sale_button"
+            tools:text="10" />
+
+        <Button
+            android:id="@+id/sale_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:focusable="false"
+            android:padding="8dp"
+            android:text="@string/sale"
+            android:textAllCaps="true" />
+    </RelativeLayout>
+</LinearLayout>
